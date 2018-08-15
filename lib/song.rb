@@ -18,7 +18,7 @@ class Song
   end
 
   def self.artists
-    @@artists
+    @@artists.sort {|x, y| x == y}
   end
 
   def self.genres
