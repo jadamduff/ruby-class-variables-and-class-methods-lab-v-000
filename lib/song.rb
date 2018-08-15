@@ -34,6 +34,10 @@ class Song
   end
 
   def self.genre_count
-    @@genre_count
+    genre_hash = {}
+    @@genres.each_with_index do |val, index|
+      genre_hash[val] = @@genres.select {|i| i == val}.count
+    end
+    genre_hash
   end
 end
