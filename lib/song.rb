@@ -9,7 +9,7 @@ class Song
     @artist = artist
     @genre = genre
     @@count += 1
-    @@artists << @artist if !@@artists.detect(@artist)
+    @@artists << artist if !@@artists.detect(artist)
     @@genres << self.genre
   end
 
