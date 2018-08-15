@@ -9,8 +9,8 @@ class Song
     @artist = artist
     @genre = genre
     @@count += 1
-    @@artists << self.artist if !@@artists.include?(self.artist)
-    @@genres << self.genre if !@@genres.include?(self.genre)
+    @@artists << self.artist
+    @@genres << self.genre
   end
 
   def self.count
@@ -28,7 +28,7 @@ class Song
   def self.artist_count
     artist_hash = {}
     @@artists.each_with_index do |val, index|
-      artist_hash[val] = index = 1
+      artist_hash[val] = @@artists.slect {|i| i == val}.count
     end
     artist_hash
   end
