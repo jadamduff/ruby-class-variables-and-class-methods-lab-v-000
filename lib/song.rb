@@ -27,7 +27,7 @@ class Song
 
   def self.artist_count
     artist_hash = {}
-    @@artists.each_with_index do |index, val|
+    @@artists.each_with_index do |val, index|
       artist_hash[val] = index
     end
     artist_hash
