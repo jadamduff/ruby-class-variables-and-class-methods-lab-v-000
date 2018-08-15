@@ -23,5 +23,5 @@ class Song
     @@genres
   end
 
-  
+
 end
